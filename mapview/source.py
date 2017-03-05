@@ -17,6 +17,7 @@ class MapSource(object):
 
     attribution_osm = 'Maps & Data © [i][ref=http://www.osm.org/copyright]OpenStreetMap contributors[/ref][/i]'
     attribution_thunderforest = 'Maps © [i][ref=http://www.thunderforest.com]Thunderforest[/ref][/i], Data © [i][ref=http://www.osm.org/copyright]OpenStreetMap contributors[/ref][/i]'
+	cartoDB = '© [i][ref=http://www.openstreetmap.org/copyright OpenStreetMap[/ref][/i] © [i][ref=http://cartodb.com/attributions#basemaps CartoDB[/ref][/i]'
 
     # list of available providers
     # cache_key: (is_overlay, minzoom, maxzoom, url, attribution)
@@ -30,6 +31,12 @@ class MapSource(object):
         "thunderforest-transport": (0, 0, 19, "http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png", attribution_thunderforest),
         "thunderforest-landscape": (0, 0, 19, "http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png", attribution_thunderforest),
         "thunderforest-outdoors": (0, 0, 19, "http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png", attribution_thunderforest),
+		"dark matter":(0, 0, 18, "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png", cartoDB),
+		"positron ":(0, 0, 18, "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png", cartoDB),
+		"dark matter lite":(0, 0, 18, "http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png", cartoDB),
+		"positron lite":(0, 0, 18, "http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png", cartoDB),
+		"CartoDB World Antique":(0, 0, 18, "https://cartocdn_{s}.global.ssl.fastly.net/base-antique/{z}/{x}/{y}.png", cartoDB),
+		"CartoDB World Eco":(0, 0, 18, "https://cartocdn_{s}.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png", cartoDB),			
         
         # no longer available
         #"mapquest-osm": (0, 0, 19, "http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg", "Tiles Courtesy of Mapquest", {"subdomains": "1234", "image_ext": "jpeg"}),
